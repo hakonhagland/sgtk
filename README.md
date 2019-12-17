@@ -9,6 +9,30 @@ make
 make install
 ```
 
+## A sample test program
+
+```
+
+#include <sgtk.h>
+
+int main() {
+    int x = 100;
+    int y = 100;
+    int width = 600;
+    int height = 400;
+    if ( !define_window(x, y, width, height) ) {
+        printf( "Could not open window!\n" );
+        exit(1);
+    }
+    set_title("Test window");
+    set_line_width(2);
+    set_line_color( "#0000ff" );
+    draw_line(0,0, 100,100);
+    show_window();
+    return 0;
+}
+```
+
 ## Compiling a test program
 
 ```
@@ -18,7 +42,6 @@ gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c `pkg-config --libs gtk+-3.0` 
 
 ## Running the test program
 
-This is a test
 ```
 LD_LIBRARY_PATH=$INSTALL_PATH/lib a.out
 
