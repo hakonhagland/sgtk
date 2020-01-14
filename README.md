@@ -5,8 +5,11 @@
 ```
 git clone git@github.com:hakonhagland/sgtk.git
 cd sgtk
+mkdir build
+cd build
+cmake ..
 make
-make install
+sudo make install
 ```
 
 ## A sample test program
@@ -33,7 +36,7 @@ int main() {
 }
 ```
 
-## Compiling a test program
+## Compiling the test program
 
 ```
 INSTALL_PATH=/name/of/directory/where/you/installed
