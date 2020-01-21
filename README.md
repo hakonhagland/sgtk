@@ -1,5 +1,13 @@
 # sgtk
 
+## Prerequisites for installation
+
+Note, that some packages need to be installed for build. For example,
+for Ubuntu the following command should be used:
+```
+sudo apt-get install -y cmake gtk+-3.0 g++
+```
+
 ## Installation
 
 ```
