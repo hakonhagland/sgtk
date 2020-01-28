@@ -24,6 +24,8 @@ sudo make install
 
 ```
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <sgtk.h>
 
 int main() {
@@ -52,7 +54,7 @@ gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c -lsgtk `pkg-config --libs gtk
 ```
 
 Note: It is important that you link with `libsgtk.so` before you link
-with the GTK3 libraries. So
+with the GTK3 libraries in the above command. So
 ```
 gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c `pkg-config --libs
 gtk+-3.0` -lsgtk
