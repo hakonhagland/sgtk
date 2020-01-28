@@ -48,8 +48,16 @@ int main() {
 
 ```
 INSTALL_PATH=/name/of/directory/where/you/installed
-gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c `pkg-config --libs gtk+-3.0` -lsgtk
+gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c -lsgtk `pkg-config --libs gtk+-3.0`
 ```
+
+Note: It is important that you link with `libsgtk.so` before you link
+with the GTK3 libraries. So
+```
+gcc -I"$INSTALL_PATH" -L"$INSTALL_PATH"/lib test.c `pkg-config --libs
+gtk+-3.0` -lsgtk
+```
+would **not** work.
 
 ## Running the test program
 
