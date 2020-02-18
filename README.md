@@ -2,8 +2,21 @@
 
 ## Prerequisites for installation
 
-Note, that some packages need to be installed for build. For example,
-for Ubuntu the following command should be used:
+Note, that some packages need to be installed before building.
+### Windows
+
+- Install MSYS2, see: https://www.msys2.org/
+- pacman -S git cmake
+- pacman -S mingw64/mingw-w64-x86_64-gtk3
+- pacman -S gcc
+- pacman -S make
+- export PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:$PGK_CONFIG_PATH
+
+Ubuntu: /usr/lib/x86_64-linux-gnu/pkgconfig/gtk+-3.0.pc
+Windows: /mingw64/lib/pkgconfig/gtk+-3.0.pc
+### Ubuntu
+
+For Ubuntu the following command should be used:
 ```
 sudo apt-get install -y cmake gtk+-3.0 g++
 ```
@@ -11,7 +24,8 @@ sudo apt-get install -y cmake gtk+-3.0 g++
 ## Installation
 
 ```
-git clone git@github.com:hakonhagland/sgtk.git
+git clone https://github.com/hakonhagland/sgtk.git
+# git clone git@github.com:hakonhagland/sgtk.git
 cd sgtk
 mkdir build
 cd build

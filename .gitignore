@@ -2,3 +2,5 @@ backup/
 build*/
 lib/
 *.o
+\#*
+.#*
